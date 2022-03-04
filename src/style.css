@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+
+    
+}
+.button{
+    padding: 15px  30px;
+    border-radius: 5px;
+    background-color: #ff33cc;
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
+}
+#portal .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    animation: animate 0.3s
+  }
+  .container .modal {
+    z-index: 1;
+    width: 600px;
+    height: 500px;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    animation: animate 0.5s;
+  }
+  form {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px;
+
+  }
+  h1 {
+      text-align: center;
+      text-transform: uppercase;
+  }
+  .icon{
+      height: 25px;
+      position: absolute;
+      margin-left: 10px;
+      pointer-events: none;
+
+  }
+  .email--input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 16px;
+   
+  }
+  .email{
+      width: 500px;
+      padding: 20px 40px;
+      border-radius: 5px;
+      background-color: #F0F0F0;
+      border: none;
+  }
+
+  .password--input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: gray;
+
+  }
+  .password {
+    width: 500px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    background-color: #F0F0F0;
+    border: none;
+  }
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap:5px;
+    padding: 20px 0;
+    font-size: 18px;
+  }
+  .login--section{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+  }
+  .login--button{
+      padding: 15px 0;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      border: none;
+      background-color: #ff33cc;
+      cursor: pointer;
+      color: white;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  span{
+      padding: 10px 0 20px;
+      font-size: 18px;
+  }
+  .google--button{
+      padding: 15px 0;
+      font-weight: bold;
+      color: #DB4437;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      border-radius: 5px;
+      border: none;
+      border: 1px solid silver;
+      background-color: white;
+      cursor: pointer;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  @keyframes animate {
+    from {
+      transform: scale(0.5);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
