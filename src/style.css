@@ -80,6 +80,7 @@
       border-radius: 5px;
       background-color: #F0F0F0;
       border: none;
+      font-size: 16px;
   }
 
   .password--input {
@@ -95,14 +96,28 @@
     border-radius: 5px;
     background-color: #F0F0F0;
     border: none;
+    font-size: 16px;
   }
   .checkbox {
     display: flex;
     align-items: center;
-    gap:5px;
+    gap:8px;
     padding: 20px 0;
-    font-size: 18px;
+    font-size: 19px;
   }
+  input[type=checkbox]{
+      height: 1.4em;
+      width: 1.4em;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid #ff33cc;
+    
+  }
+input[type=checkbox]:checked{
+    transform: rotate(0deg) scale(1);
+
+} 
+  
   .login--section{
       display: flex;
       flex-direction: column;
@@ -120,11 +135,20 @@
       color: white;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
+  .login--button:hover{
+      border: 1px solid #ff33cc;
+      color: black;
+      background-color: white;
+      -webkit-transition: all .275s;
+      transition: all .275s;
+
+  }
   span{
       padding: 10px 0 20px;
       font-size: 18px;
   }
   .google--button{
+      margin: 0 50px;
       padding: 15px 0;
       font-weight: bold;
       color: #DB4437;
@@ -135,10 +159,20 @@
       gap: 5px;
       border-radius: 5px;
       border: none;
-      border: 1px solid silver;
+      border: 1px solid #DB4437;
       background-color: white;
       cursor: pointer;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .google--button:hover{
+      background-color: #DB4437;
+      color: white;
+      transition: ease-in-out 0.3s;
+  }
+  .homepage {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   @keyframes animate {
@@ -149,4 +183,41 @@
       transform: scale(1);
     }
   }
+@media (max-width: 767.98px) {
+  .container .modal {
+    width: 300px;
+  }
+  .email {
+    width: 300px;
+  }
+  .password {
+    width: 300px;
+  }
+  .login--button:hover{
+    border: 1px solid #ff33cc;
+    color: black;
+    background-color: white;
+    -webkit-transition: all .275s;
+    transition: all .275s;
 
+}
+.login--button:hover{
+  border: 1px solid #ff33cc;
+  color: black;
+  background-color: white;
+  -webkit-transition: all .275s;
+  transition: all .275s;
+
+}
+.checkbox{
+  justify-content: center;
+}
+.google--button{
+  margin: 0;
+}
+.google--button::after(clicked){
+  background-color: #DB4437;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+}

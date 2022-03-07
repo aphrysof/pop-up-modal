@@ -1,9 +1,13 @@
 import React, {useRef} from 'react'
 import ReactDom from "react-dom";
 import {FaGoogle} from "react-icons/fa"
+
+
 import "./style.css"
 
-const Modal = ({ setShowModal}) => {
+const Modal = ({ setShowModal, SignInWithGoogle}) => {
+
+
 
 // close the modal when clicking outside the modal.
 const modalRef = useRef();
@@ -50,14 +54,17 @@ const closeModal = (e) => {
                /><label>Remember me</label>
                </div>
                <div className='login--section'>
-               <button className='login--button'>LOGIN</button>
+               <button 
+               className='login--button'
+               >LOGIN</button>
                <span>Or login with</span>
-               <button className='google--button'><FaGoogle/>Google</button>
                </div>
         </form>
-        
-
-      
+        <div className='login--section'>
+        <button className='google--button'
+                 onClick = {SignInWithGoogle}
+               ><FaGoogle/>Google</button>
+        </div>
       </div>
     </div>,
     document.getElementById("portal")
